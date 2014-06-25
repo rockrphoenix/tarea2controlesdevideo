@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Tarea 3</title>
+		<link rel="stylesheet" href="estilos.css"/>
+		<style>
+			.sombras {
+				/*sombras*/
+				-webkit-box-shadow: 0px 0px 5px 3px #333;
+				-moz-box-shadow: 0px 0px 5px 3px #333;
+				-o-box-shadow: 0px 0px 5px 3px #333;
+				box-shadow: 0px 0px 5px 3px white;
+			}
+		</style>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#boton-reproducir").click(function(){
+					var elVideo=$("#video")[0];
+					elVideo.play();
+					$("#video").addClass("sombras");
+					$("#estado-video").html("Video Activo");
+				});
+				$("#boton-pausa").click(function(){
+					var elVideo=$("#video")[0];
+					elVideo.pause();
+					$("#video").removeClass("sombras");
+					$("#estado-video").html("Video Inactivo");
+				});
+				
+
+			});					
+		</script>
+	</head>
+	<body>
+
+		<div id="contenedor">
+
+			<video id="video">
+				<source src="videos/gato.mp4" type="video/mp4" />
+				<source src="videos/gato.ogg" type="video/ogg" />
+				<source src="videos/gato.webm" type="video/webm" />
+				Tu navegador no soporta video nativo
+			</video>
+
+			<p id="estado-video" >
+				Video inactivo
+			</p>
+
+			<p id="controles">
+				<a id="boton-reproducir">Reproducir</a>
+				<a id="boton-pausa">Pausa</a>
+			</p>
+
+		</div>
+	</body>
+</html>

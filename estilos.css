@@ -1,0 +1,66 @@
+/*obtenemos una fuente de google fonts*/
+@import url(http://fonts.googleapis.com/css?family=Sonsie+One);
+
+/*usamos la fuente*/
+body {
+	padding-top:40px;
+	background-image: url(imagenes/fondo.png);
+	font-family: 'Sonsie One', cursive;
+	text-align: center;
+}
+
+/*ESTADO INICIAL DE LOS BOTONES*/
+a {
+	position: relative;
+	color: rgba(255,255,255,1);
+	text-decoration: none;
+	background-color: rgba(219,87,5,1);	
+	font-weight: 700;
+	font-size: 1em;
+	padding: 4px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+	-moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+	box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+	margin: 100px auto;	
+	/*INDICO EL CAMBIO AL ESTADO :ACTIVE LO HAGA LENTAMENTE*/
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+	/*COMO EL ANCHOR NO TIENE UNA REFERENCIA NO SEMUESTRA, LE INDICAMOS QUE MUESTRE LA MANITA*/
+	cursor: pointer;
+}
+
+/*ESTADO DE LOS BOTONES CUANDO SE OPRIMEN*/
+a:active {
+	-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+	-moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+	box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+	position: relative;
+	top: 6px;
+}
+
+#contenedor {
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#estado-video {	
+	padding: 10px;
+	font-size:20px;
+	background-image: url(imagenes/fondo_cuadros.jpg);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#controles {
+	margin-left: auto;
+	margin-right: auto;
+}
